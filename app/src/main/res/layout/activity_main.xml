@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.giftest.MainActivity"
+    android:orientation="vertical">
+
+<TextView
+    android:text="用按钮控制的gif"
+    android:gravity="center"
+    android:textSize="20sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+   <pl.droidsonroids.gif.GifImageView
+       android:id="@+id/giv1"
+       android:src="@drawable/hzw"
+       android:layout_width="wrap_content"
+       android:layout_height="200dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="startClick"
+        android:text="开始/继续"/>
+
+    <Button
+        android:onClick="resetClick"
+        android:layout_weight="1"
+        android:text="重新开始"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:text="停止"
+        android:onClick="stopClick"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+    <TextView
+        android:text="由MediaPlayerControl控制的gif"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/giv2"
+        android:src="@drawable/hzw"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"/>
+
+</LinearLayout>
